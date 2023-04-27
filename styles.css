@@ -64,6 +64,9 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width : 80%;
+  height : 80%;
+  margin : 0 auto;
 }
 
 .button-container {
@@ -90,4 +93,47 @@ button:hover {
   .other-content {
     margin-left: 0px;
   }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  height: 60px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 50%;
+}
+
+li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+li a:hover {
+  color: #f00;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+#result {
+  font-size: 20px;
 }
