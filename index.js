@@ -49,4 +49,5 @@ function findinfo() {
 }
 
 alert('hey')
+alert(findinfo())
 console.log(findinfo())
