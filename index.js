@@ -50,4 +50,5 @@ function findinfo() {
 
 alert('hey')
 console.log(findinfo())
+
 //window.location.replace("https://github.com/AngleLaPuta");
