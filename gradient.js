@@ -1,23 +1,17 @@
 const container = document.querySelector('.button-container');
 const buttons = container.querySelectorAll('button');
 const numButtons = buttons.length;
-const startHue = 0;
-const endHue = 240;
-const hueStep = (endHue - startHue) / (numButtons - 1);
-
-function getHSL(hue) {
-  return `hsl(${hue}, 50%, 50%)`;
-}
+const startColor = [0, 0, 0]; // RGB value of lightest color
+const endColor = [221, 221, 221]; // RGB value of darkest color
+const colorStep = [
+  (startColor[0] - endColor[0]) / (numButtons - 1),
+  (startColor[1] - endColor[1]) / (numButtons - 1),
+  (startColor[2] - endColor[2]) / (numButtons - 1)
+];
 
 buttons.forEach((button, index) => {
-  const hue = startHue + index * hueStep;
-  button.style.backgroundColor = getHSL(hue);
-});
-
-container.addEventListener('mouseover', () => {
-  container.style.backgroundSize = `100% ${100 / numButtons * 100}%`;
-});
-
-container.addEventListener('mouseout', () => {
-  container.style.backgroundSize = `100% 0%`;
+  r = startColor[0] - index * colorStep[0];
+  g = startColor[1] - index * colorStep[1];
+  b = startColor[2] - index * colorStep[2];
+  button.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 });

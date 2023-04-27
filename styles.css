@@ -4,6 +4,7 @@
   align-items: center;
 }
 
+
 button {
   display: inline-block;
   padding: 10px 20px;
@@ -14,11 +15,47 @@ button {
   font-size: 24px;
   text-align: center;
   text-decoration: none;
-  background: linear-gradient(to bottom, #ff0000, #0000ff);
-  background-size: 100% 200%;
-  transition: background-size 0.5s;
+  /*background: linear-gradient(to bottom, #f8f8f8, #dddddd);*/
+  background-size: 100% 400%;
+  transition: background-position 0.5s;
 }
 
+
+
 button:hover {
-  background-size: 100% 100%;
+  background-position: 0% -100%;
+  background-image: linear-gradient(to bottom, #ff0000, #ff6666, #ff6666, #ff6666, #ff6666);
+}
+
+
+/* Apply the custom color class to each button */
+.red {
+  background-color: #ff9a9e; /* pastel red */
+}
+.orange {
+  background-color: #ffb347; /* pastel orange */
+}
+.yellow {
+  background-color: #ffff9d; /* pastel yellow */
+}
+.green {
+  background-color: #b0ffb0; /* pastel green */
+}
+.blue {
+  background-color: #b0b0ff; /* pastel blue */
+}
+.indigo {
+  background-color: #d8b5ff; /* pastel indigo */
+}
+.purple {
+  background-color: #ff9af7; /* pastel purple */
+}
+.pink {
+  background-color: #ff9ac2; /* pastel pink */
+}
+.mint {
+  background-color: #9affb0; /* pastel mint */
+}
+.peach {
+  background-color: #ff9a9e; /* pastel peach */
 }
