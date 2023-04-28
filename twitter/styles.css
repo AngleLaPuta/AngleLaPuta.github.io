@@ -37,23 +37,13 @@ a:active {
 }
 
 .imageshowcase img {
-  max-width: calc(50% - 5px);
+  width: 300px;
+  object-fit: contain;
   margin-bottom: 10px;
   margin-right: 5px;
   margin-left: 5px;
 }
 
-@media (min-width: 400px) {
-  .imageshowcase img {
-    max-width: calc(35% - 5px);
-  }
-}
-
-@media (max-width: 200px) {
-  .imageshowcase img {
-    max-width: 50%;
-  }
-}
 
 
 
