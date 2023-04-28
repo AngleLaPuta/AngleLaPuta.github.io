@@ -5,16 +5,15 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
-    <script src="gradient.js"></script>
   </head>
-  <body onload = "cycle()">
+  <body>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
       </ul>
     </nav>
     <main>
-      <div class="container">
+      <div class="blue container">
         <div class="button-container">
           <a href="aboutme.html"><button class="red">About Me</button></a>
           <a href="interests.html"><button class="orange">Interests</button></a>
@@ -43,31 +42,22 @@
           </ul>
         </div>
       </div>
-      <div class="container">
-        
-        <div id="other-content">
-
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-          <script>
-          $(function() {
-            var dir = "bust/"; // Directory path
-            var imageContainer = $("#image-container"); // Container for the images
-
-            // Make AJAX request to get list of image files
-            $.ajax({
-              url: dir,
-              success: function(data) {
-                $(data).find("a:contains(.jpg), a:contains(.jpeg), a:contains(.png), a:contains(.gif)").each(function() {
-                  var filename = $(this).attr("href");
-                  imageContainer.append('<div class="other-content"><img src="' + dir + filename + '" width="100" alt="Image description"></div>');
-                });
-              }
-            });
-          });
-          </script>
+      <div class="red container">
+        <div class="imageshowcase">
+          <img src="bust/image01.jpg" width = "150" alt="Image description">
+          <img src="bust/image02.jpg" width = "150" alt="Image description">
+          <img src="bust/image03.jpg" width = "150" alt="Image description">
+          <img src="bust/image04.jpg" width = "150" alt="Image description">
         </div>
         <div class="other-content">
           <h1>Bust/PFP</h1>
+          <ul>
+            <li>Sketch: $2.50 / 200 RBX</li>
+            <li>Lined: $3.00 / 240 RBX</li>
+            <li>Shading: +$0.50 / 40 RBX</li>
+            <li>Coloring: +$0.50 / 40 RBX</li>
+            <li>No detailed backgrounds</li>
+          </ul>
         </div>
       </div>
     </main>

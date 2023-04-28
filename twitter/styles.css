@@ -1,3 +1,35 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.imageshowcase {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50vw; /* Set the maximum width to 50% of the viewport width */
+}
+
+.imageshowcase img {
+  width: calc(50% - 5px);
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+@media (min-width: 400px) {
+  .imageshowcase img {
+    width: calc(35% - 5px);
+  }
+}
+
+@media (max-width: 200px) {
+  .imageshowcase img {
+    width: 50%;
+  }
+}
+
+
+
+
 .slideshow {
     width: 500px;
     height: 300px;
@@ -12,6 +44,7 @@
 .button-container {
   display: flex;
   flex-direction: column;
+
 }
 
 button {
@@ -70,7 +103,6 @@ button:hover {
 .container {
   align-items: flex-start;
   border-radius: 20px;
-  background-color: #ffffff;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
   display: flex;
@@ -79,6 +111,10 @@ button:hover {
   width : 80%;
   height : 80%;
   margin : 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .button-container {
