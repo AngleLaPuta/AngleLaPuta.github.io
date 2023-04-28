@@ -2,6 +2,7 @@ body {
   font-family: "Comic Sans MS", cursive, sans-serif;
   background: linear-gradient(-45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee), linear-gradient(-45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb);
   background-size: 20px 20px;
+  margin-top: 100px; /* adjust the value to match the height of the footer */
 }
 footer {
   position: fixed;
@@ -183,14 +184,6 @@ button:hover {
   }
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f9f9;
-  height: 60px;
-}
-
 
 
 .nav-links {
@@ -222,6 +215,17 @@ nav {
   color: #f00;
   background-color: #ddd;
 }
+
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
 
 
 footer {
