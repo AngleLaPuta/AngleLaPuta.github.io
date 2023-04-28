@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kit's Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="index.js"></script>
+    <script src="gradient.js"></script>
+  </head>
+  <body onload = "cycle()">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="container">
+        <div class="button-container">
+          <a href="aboutme.html"><button class="red">About Me</button></a>
+          <a href="interests.html"><button class="orange">Interests</button></a>
+          <a href="dni.html"><button class="yellow">DNI</button></a>
+          <a href="https://pronouny.xyz/u/theangledust"><button class="green">Pronouny</button></a>
+          <a href="https://angles-comms.carrd.co/"><button class="blue">Comms</button></a>
+          <a href="https://discord.gg/RyvTMqwfZF"><button class="indigo">Discord</button></a>
+          <a href="links.html"><button class="purple">LinkTree</button></a>
+        </div>
+        <div class="other-content">
+          <h1>COMMISSIONS</h1>
+          <p>Any solid color, flag, or specific image background is free, just ask</p>
+          <p>Chibi type comms: -25%</p>
+          <p><strong>ALL PAYMENTS WITH PAYPAL: +20%</strong></p>
+
+          <p><strong>TAKING NITRO AS PAYMENT FOR HALFBODYS</strong></p>
+
+          <p>Also, you can just gift me something off of <a href="https://www.amazon.com/hz/wishlist/ls/3NZ2IZZ4NP4XH?ref_=wl_share">amazon </a> for a comm 2x the price</p>
+          <h2>Limits</h2>
+          <ul>
+            <li>NSFW art (CLOTHE THEM PLEASE)</li>
+            <li>Extreme fetish art (anything i deem so)</li>
+            <li>Extreme Gore</li>
+            <li>Extremely Detailed Characters</li>
+            <li>Extremely Detailed Backgrounds</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        
+        <div id="other-content">
+
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script>
+          $(function() {
+            var dir = "bust/"; // Directory path
+            var imageContainer = $("#image-container"); // Container for the images
+
+            // Make AJAX request to get list of image files
+            $.ajax({
+              url: dir,
+              success: function(data) {
+                $(data).find("a:contains(.jpg), a:contains(.jpeg), a:contains(.png), a:contains(.gif)").each(function() {
+                  var filename = $(this).attr("href");
+                  imageContainer.append('<div class="other-content"><img src="' + dir + filename + '" width="100" alt="Image description"></div>');
+                });
+              }
+            });
+          });
+          </script>
+        </div>
+        <div class="other-content">
+          <h1>Bust/PFP</h1>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright © 2023</p>
+      <div id="result"></div>
+    </footer>
+  </body>
+</html>
