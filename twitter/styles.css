@@ -12,19 +12,6 @@ body {
   cursor: url('nya/Normal.cur'), url('custom.ani'), auto;
 }
 
-a {
-  color: hotpink;
-  text-decoration: none;
-}
-
-a:visited {
-  color: hotpink;
-}
-
-a:hover {
-  color: pink;
-  cursor: url('nya/Bg.cur'), url('custom.ani'), auto;
-}
 
 a:active {
   color: hotpink;
@@ -91,6 +78,35 @@ button:hover {
 .white{
   background-color: #ffffff;
 }
+
+.red a {
+  color: pink;
+}
+
+.orange a {
+  color: hotpink;
+}
+
+.yellow a {
+  color: hotpink;
+}
+
+.green a {
+  color: hotpink;
+}
+
+.blue a {
+  color: hotpink;
+}
+
+.indigo a {
+  color: hotpink;
+}
+
+.purple a {
+  color: hotpink;
+}
+
 
 /* Apply the custom color class to each button */
 .red {
@@ -223,4 +239,26 @@ footer p {
 
 #result {
   font-size: 20px;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: hotpink;
+}
+
+a:hover {
+  color: pink;
+  cursor: url('nya/Bg.cur'), url('custom.ani'), auto;
+}
+.red a:visited {
+  color: pink;
+}
+
+.red a:hover {
+  color: hotpink;
 }
