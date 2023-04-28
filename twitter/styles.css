@@ -23,7 +23,7 @@ a:visited {
 
 a:hover {
   color: pink;
-  cursor: url('nya/Normal.cur'), url('custom.ani'), auto;
+  cursor: url('nya/Bg.cur'), url('custom.ani'), auto;
 }
 
 a:active {
@@ -95,7 +95,7 @@ button {
 button:hover {
   background-position: 0% -100%;
   background-image: linear-gradient(to bottom, #ff0000, #ff6666, #ff6666, #ff6666, #ff6666);
-  cursor: url('nya/Normal.cur'), url('custom.ani'), auto;
+  cursor: url('nya/Bg.cur'), url('custom.ani'), auto;
 }
 
 .white{
