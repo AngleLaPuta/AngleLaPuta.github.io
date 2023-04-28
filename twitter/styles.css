@@ -9,7 +9,7 @@ body {
 }
 
 .imageshowcase img {
-  width: calc(50% - 5px);
+  max-width: calc(50% - 5px);
   margin-bottom: 10px;
   margin-right: 5px;
   margin-left: 5px;
@@ -74,7 +74,7 @@ button:hover {
   background-color: #ff9a9e; /* pastel red */
 }
 .orange {
-  background-color: #ffb347; /* pastel orange */
+  background-color: #ffdfba; /* pastel orange */
 }
 .yellow {
   background-color: #ffff9d; /* pastel yellow */
