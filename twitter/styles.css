@@ -25,13 +25,13 @@ footer {
 
 @media (min-width: 400px) {
   .imageshowcase img {
-    width: calc(35% - 5px);
+    max-width: calc(35% - 5px);
   }
 }
 
 @media (max-width: 200px) {
   .imageshowcase img {
-    width: 50%;
+    max-width: 50%;
   }
 }
 
