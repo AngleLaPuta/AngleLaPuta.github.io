@@ -1,24 +1,64 @@
-
-
 // Function to get the user's IP address
 function getIPAddress() {
   return fetch('https://api.ipify.org/?format=json')
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Unable to fetch IP address');
+      }
+      return response.json();
+    })
     .then(data => data.ip);
 }
 
 // Function to get the user's current location
 function getCurrentLocation() {
   return new Promise((resolve, reject) => {
+    if (!navigator.geolocation) {
+      reject(new Error('Geolocation is not supported'));
+    }
     navigator.geolocation.getCurrentPosition(
       position => resolve({
         latitude: position.coords.latitude,
         longitude: position.coords.longitude
       }),
-      error => reject(error)
+      error => reject(new Error(`Geolocation error: ${error.message}`))
     );
   });
 }
+
+// Determine if geolocation permission is granted
+if (navigator.permissions) {
+  navigator.permissions.query({name:'geolocation'}).then(permission => {
+    if (permission.state === 'granted') {
+      getCurrentLocation().then(location => {
+        console.log('Latitude:', location.latitude);
+        console.log('Longitude:', location.longitude);
+      }).catch(error => {
+        console.error(error);
+        getIPAddress().then(ipAddress => {
+          console.log('IP Address:', ipAddress);
+        }).catch(error => {
+          console.error(error);
+        });
+      });
+    } else {
+      getIPAddress().then(ipAddress => {
+        console.log('IP Address:', ipAddress);
+      }).catch(error => {
+        console.error(error);
+      });
+    }
+  }).catch(error => {
+    console.error(error);
+  });
+} else {
+  getIPAddress().then(ipAddress => {
+    console.log('IP Address:', ipAddress);
+  }).catch(error => {
+    console.error(error);
+  });
+}
+
 
 // Function to get the address for a given latitude and longitude using reverse geocoding
 async function getAddress(latitude, longitude) {

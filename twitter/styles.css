@@ -1,6 +1,14 @@
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(-45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee), linear-gradient(-45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb);
+  background-size: 20px 20px;
 }
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 
 .imageshowcase {
   display: flex;
@@ -67,6 +75,10 @@ button {
 button:hover {
   background-position: 0% -100%;
   background-image: linear-gradient(to bottom, #ff0000, #ff6666, #ff6666, #ff6666, #ff6666);
+}
+
+.white{
+  background-color: #ffffff;
 }
 
 /* Apply the custom color class to each button */
