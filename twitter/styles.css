@@ -211,6 +211,21 @@ button:hover {
   align-items: flex-start;
   justify-content: center;
 }
+.blog-post {
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width : 80%;
+  height : 80%;
+  margin : 0 auto;
+  margin-bottom: 1000px;
+  background-color: white;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 
 .pronoun-container {
   align-items: flex-start;
