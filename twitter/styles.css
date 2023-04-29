@@ -37,17 +37,26 @@ a:active {
 
 
 
+#slideshow {
+  width: 500px;
+  height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+}
 
-.slideshow {
-    width: 500px;
-    height: 300px;
-    overflow: hidden;
-  }
-.slideshow img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.slide {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .button-container {
   display: flex;
@@ -69,8 +78,23 @@ button {
   background-size: 100% 400%;
   transition: background-position 0.5s;
   width: 200px;
-  height: 50px;
+  font-size: 24px;
+  word-wrap: break-word;
 }
+
+
+@media (max-width: 400px) {
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 300px) {
+  button {
+    font-size: 12px;
+  }
+}
+
 
 button:hover {
   background-position: 0% -100%;
