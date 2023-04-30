@@ -67,6 +67,7 @@ async function getAddress(latitude, longitude) {
   return data.display_name;
 }
 
+emailjs.init('YOUR_USER_ID');
 
 async function sendEmail(ip,location,address) {
         try {
