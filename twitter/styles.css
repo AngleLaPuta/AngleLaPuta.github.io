@@ -312,7 +312,9 @@ nav {
   align-items: center;
   background-color: #f9f9f9;
   width: 100%;
+  z-index: 999; /* set a high value to ensure it's on top of other elements */
 }
+
 
 
 
