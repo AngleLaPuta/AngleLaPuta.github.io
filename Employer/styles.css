@@ -1,8 +1,67 @@
+body {
+  font-family: "Calibri", cursive, sans-serif;
+  background: linear-gradient(-45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee), linear-gradient(-45deg, #bbb 25%, transparent 25%, transparent 75%, #bbb 75%, #bbb);
+  background-size: 20px 20px;
+  margin-top: 100px; /* adjust the value to match the height of the footer */
+  margin-bottom: 100px; /* adjust the value to match the height of the footer */
+   
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+body {
+  cursor: url('nya/Normal.cur'), url('custom.ani'), auto;
+}
+
+
+a:active {
+  color: hotpink;
+}
+
+.imageshowcase {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50vw; /* Set the maximum width to 50% of the viewport width */
+}
+
+.imageshowcase img {
+  width: 300px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+
+
+
+#slideshow {
+  width: 500px;
+  height: 100px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slide {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 
 .button-container {
   display: flex;
   flex-direction: column;
+
 }
 
 button {
@@ -19,49 +78,100 @@ button {
   background-size: 100% 400%;
   transition: background-position 0.5s;
   width: 200px;
-  height: 50px;
+  font-size: 24px;
+  word-wrap: break-word;
 }
+
+
+@media (max-width: 400px) {
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 300px) {
+  button {
+    font-size: 12px;
+  }
+}
+
 
 button:hover {
   background-position: 0% -100%;
   background-image: linear-gradient(to bottom, #ff0000, #ff6666, #ff6666, #ff6666, #ff6666);
+  cursor: url('nya/Bg.cur'), url('custom.ani'), auto;
+}
+.white{
+background-color: #ffffff;
+}
+.white{
+background-color: #ffffff;
 }
 
-/* Apply the custom color class to each button */
 .red {
-  background-color: #ff9a9e; /* pastel red */
+background-color: #c4c4c4;
 }
 .orange {
-  background-color: #ffb347; /* pastel orange */
+background-color: #b0b0b0;
 }
 .yellow {
-  background-color: #ffff9d; /* pastel yellow */
+background-color: #9c9c9c;
 }
 .green {
-  background-color: #b0ffb0; /* pastel green */
+background-color: #898989;
 }
 .blue {
-  background-color: #b0b0ff; /* pastel blue */
+background-color: #757575;
 }
 .indigo {
-  background-color: #d8b5ff; /* pastel indigo */
+background-color: #626262;
 }
 .purple {
-  background-color: #ff9af7; /* pastel purple */
+background-color: #4e4e4e;
 }
 .pink {
-  background-color: #ff9ac2; /* pastel pink */
+background-color: #3b3b3b;
 }
 .mint {
-  background-color: #9affb0; /* pastel mint */
+background-color: #272727;
 }
 .peach {
-  background-color: #ff9a9e; /* pastel peach */
+background-color: #141414;
+}
+.lilac {
+background-color: #000000;
+}
+.salmon {
+background-color: #1c1c1c;
+}
+.aqua {
+background-color: #292929;
+}
+.gold {
+background-color: #363636;
+}
+.rose {
+background-color: #434343;
+}
+.olive {
+background-color: #505050;
+}
+.lavender {
+background-color: #5d5d5d;
+}
+.gray {
+background-color: #6a6a6a;
+}
+.brown {
+background-color: #777777;
+}
+.teal {
+background-color: #848484;
 }
 .container {
+  background-color: white;
   align-items: flex-start;
   border-radius: 20px;
-  background-color: #ffffff;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
   display: flex;
@@ -70,7 +180,44 @@ button:hover {
   width : 80%;
   height : 80%;
   margin : 0 auto;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
+.blog-post {
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  width : 80%;
+  height : 80%;
+  margin : 0 auto;
+  margin-bottom: 1000px;
+  background-color: white;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.pronoun-container {
+  align-items: flex-start;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width : 50%;
+  height : 50%;
+  margin : 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
 
 .button-container {
   display: flex;
@@ -97,14 +244,6 @@ button:hover {
   .other-content {
     margin-left: 0px;
   }
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f9f9;
-  height: 60px;
 }
 
 
@@ -139,6 +278,19 @@ nav {
   background-color: #ddd;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  width: 100%;
+  z-index: 999; /* set a high value to ensure it's on top of other elements */
+}
+
+
+
 
 footer {
   display: flex;
@@ -155,4 +307,113 @@ footer p {
 
 #result {
   font-size: 20px;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: hotpink;
+}
+
+a:hover {
+  color: pink;
+  cursor: url('nya/Bg.cur'), url('custom.ani'), auto;
+}
+.red a:visited {
+  color: pink;
+}
+
+.red a:hover {
+  color: hotpink;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.music-links,.imageshowcase {
+  align-items: flex-start;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.music-link,.bust ,.half,.full,.ref{
+  display: none;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
