@@ -2,19 +2,59 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello!!</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+      function handleSocialClick() {
+        referrer = document.referrer.toLowerCase();
+        if (referrer.includes("linkedin") || referrer.includes("github")) {
+          window.location.href = "https://www.google.com";
+        } else if (referrer.includes("twitter")) {
+          window.location.href = "twitter/index.html";
+        } else if (referrer === "") {
+          // Do nothing, since we're already on the default page.
+        }
+      }
+
+    </script>
   </head>
   <body>
     <div class="container">
       <div class="other-content">
-        <h1>Welcome to my website</h1>
-        <p>Please let us know who you are:</p>
-      </div>
-      <div class="button-container">
-        <button class="red" onclick="window.location.href='https://www.google.com'">Employer</button>
-        <button class="blue" onclick="window.location.href='twitter/index.html'"">Twitter Mutual</button>
+        <h1>Login</h1>
+        <form>
+          <div class="form-group">
+            <label for="username"> What is my name?</label>
+            <input type="text" id="username" name="username">
+          </div>
+        </form>
       </div>
     </div>
+    <script>
+      document.getElementById("username").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          event.preventDefault(); // prevent the form from submitting
+          handleEmployerClick();
+        }
+      });
+
+      function handleEmployerClick(event) {
+        
+        const username = document.getElementById("username").value.toLowerCase();
+        // Replace this with your own validation logic.
+        console.log(username)
+        if (username == "jadon") {
+          window.location.href = "https://www.google.com";
+        } else if(username === "kit" || username === "angle"){
+          window.location.href = "twitter/index.html";
+        }
+        else {
+          alert("Invalid username or password.");
+        }
+      }
+
+      
+      handleSocialClick(); // Call the function after the page has loaded.
+    </script>
   </body>
 </html>
