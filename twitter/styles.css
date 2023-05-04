@@ -195,6 +195,17 @@ button:hover {
 .teal {
   background-color: #9ac2ff; /* pastel teal */
 }
+.lime {
+background-color: #bfff00; /* lime green */
+}
+
+.tan {
+background-color: #d2b48c; /* tan */
+}
+
+.tabby {
+background-color: #c2b280; /* tabby brown */
+}
 .container {
   align-items: flex-start;
   border-radius: 20px;
