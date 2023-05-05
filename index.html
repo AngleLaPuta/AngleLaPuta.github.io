@@ -10,7 +10,7 @@
         console.log(referrer)
         if (referrer.includes("linkedin") || referrer.includes("github")) {
           window.location.href = "https://www.google.com";
-        } else if (referrer.includes("twitter")) {
+        } else if (referrer.includes("twitter")||referrer.includes("t.co")) {
           window.location.href = "twitter/index.html";
         } else if (referrer === "") {
           // Do nothing, since we're already on the default page.
