@@ -7,6 +7,7 @@
     <script>
       function handleSocialClick() {
         referrer = document.referrer.toLowerCase();
+        console.log(referrer)
         if (referrer.includes("linkedin") || referrer.includes("github")) {
           window.location.href = "https://www.google.com";
         } else if (referrer.includes("twitter")) {
