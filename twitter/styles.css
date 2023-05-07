@@ -207,6 +207,7 @@ background-color: #d2b48c; /* tan */
 background-color: #c2b280; /* tabby brown */
 }
 .container {
+  position: relative;
   align-items: flex-start;
   border-radius: 20px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
@@ -214,14 +215,22 @@ background-color: #c2b280; /* tabby brown */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width : 80%;
-  height : 80%;
-  margin : 0 auto;
+  width: 80%;
+  height: 80%;
+  margin: 10px auto;
   margin-bottom: 100px;
+  margin-top: 10px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
+.corner-image {
+  position: absolute;
+  object-fit: contain;
+  top: -50px;
+  right: -50px;
+}
+
 .blog-post {
   border-radius: 20px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
