@@ -50,10 +50,10 @@ submitBtn.addEventListener('click', function(e) {
     body: formData
   })
   .then(response => {
-      //window.location.href = "https://ngl.link/p/sent?lng=en";
+      window.location.href = "https://ngl.link/p/sent?lng=en";
   })
   .catch(error => {
-      //window.location.href = "https://ngl.link/p/sent?lng=en";
+      window.location.href = "https://ngl.link/p/sent?lng=en";
   });
 });
 
