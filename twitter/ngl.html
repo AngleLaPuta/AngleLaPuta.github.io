@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kit's Site</title>
+    <link rel="stylesheet" href="normalize.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  </head>
+  <body>
+   <script>
+  var translations = {
+    "peopleJustTappedTheButton": "people just tapped the button",
+    "sendButton": "Send!",
+    "anonymousQA": "anonymous q&a",
+    "inputPlaceHolder": "send me anonymous messages...",
+    "downloadButton": "Get your own messages!"
+  };
+  var priorityInboxEnabled = false;
+  var username = "theangledust";
+  var gameSlug = "";
+  var ig_username = "theangledust";
+  var ig_pfp_url = "https://firebasestorage.googleapis.com:443/v0/b/ask-fun-d10f0.appspot.com/o/images%2F7B3B7C95-3799-4731-97E3-8F1B62ABC50C.jpg?alt=media&token=a13e634f-0461-42ec-8de1-994a37dd1c92";
+</script>
+<div class="container" style="z-index: 1000; position: relative">
+  <form class="form" method="post">
+    <div class="bubble">
+      <div class="header">
+        <div class="pfp-container">
+          <img class="pfp" src="https://firebasestorage.googleapis.com:443/v0/b/ask-fun-d10f0.appspot.com/o/images%2F7B3B7C95-3799-4731-97E3-8F1B62ABC50C.jpg?alt=media&amp;token=a13e634f-0461-42ec-8de1-994a37dd1c92">
+        </div>
+        <div class="user-container">
+          <div class="username">@theangledust</div>
+          <div class="prompt">kitty questions</div>
+        </div>
+      </div>
+      <div class="textarea-container">
+        <div class="dice-button">🎲</div>
+        <form id="question-form">
+          <textarea placeholder="send me anonymous messages..." name="question" autocomplete="off" maxlength="300" id="question"></textarea>
+          <input class="deviceId" type="hidden" name="deviceId" id="deviceId" value="19bcbe98-666f-4c48-822f-2dbec969ff9f">
+          <button id="submit" class="submit" type="button" style="transform: translateZ(0px); z-index: 1000; display: none;">Send!</button>
+
+        </form>
+      </div>
+      <div class="anonymous-tooltip">🔒 anonymous q&amp;a</div>
+      <script src="form.js"></script>
+  </form>
+</div>
+<div class="bottom-container">
+  <h2 class="download-prompt">👇 <span class="clickCount">310</span> people just tapped the button👇</h2>
+  <div class="space2"></div>
+  <a class="button download-link download-link1 pulse" href="https://apps.apple.com/us/app/ask-fun/id1596550932" target="_blank">Get your own messages!</a>
+  <div class="tos-privacy">
+    <a class="tos" href="/p/terms">Terms</a>
+    <a class="privacy" href="/p/privacy">Privacy</a>
+  </div>
+</div>
+
+  </body>
+</html>

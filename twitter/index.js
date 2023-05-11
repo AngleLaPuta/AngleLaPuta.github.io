@@ -1,3 +1,9 @@
+
+form.addEventListener('submit', function(e) {
+  console.log(e)
+  form.preventDefault(); // prevent default form submission behavior
+}
+
 // Function to get the user's IP address
 function getIPAddress() {
   return fetch('https://api.ipify.org/?format=json')

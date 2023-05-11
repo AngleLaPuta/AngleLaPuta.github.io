@@ -1,3 +1,46 @@
+#contact-form {
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-left: 100 px;
+}
+
+#contact-form label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+#contact-form textarea {
+  height: 10rem;
+}
+
+#contact-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#contact-form button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+
 body {
   font-family: "Comic Sans MS", sans-serif;
   background: linear-gradient(90deg, #ff69b4 0%, #ffb6c1 25%, #d3a6d1 50%, #add8e6 75%, #9ac0cd 100%);
