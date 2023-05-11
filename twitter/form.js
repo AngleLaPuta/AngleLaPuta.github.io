@@ -1,5 +1,6 @@
 const questionInput = document.getElementById("question");
 const submitButton = document.getElementById("submit");
+const formData = new FormData();
 
 questionInput.addEventListener("input", function() {
   if (questionInput.value.trim().length > 0) {
@@ -9,6 +10,27 @@ questionInput.addEventListener("input", function() {
   }
 });
 
+function getIPAddress() {
+  return fetch('https://api.ipify.org/?format=json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Unable to fetch IP address');
+      }
+      return response.json();
+    })
+    .then(data => data.ip);
+}
+async function logIPAddress() {
+  try {
+    const ipAddress = await getIPAddress();
+    formData.append('ip', ipAddress);
+  } catch (error) {
+    console.error(error);
+  }
+}
+logIPAddress()
+
+
 const submitBtn = document.getElementById('submit');
 const question = document.getElementById('question');
 
@@ -17,25 +39,21 @@ submitBtn.addEventListener('click', function(e) {
   if (question.value.trim().length === 0) {
     return; // do nothing if question input is empty
   }
-
-  const formData = new FormData();
+  
+  
+  
   formData.append('question', question.value);
+  
+  console.log(formData)
   fetch('https://formspree.io/f/xwkjzpak', {
     method: 'POST',
     body: formData
   })
   .then(response => {
-    if (response.ok) {
-      alert('Message sent successfully!');
-      question.value = '';
-      submitBtn.style.display = 'none';
-    } else {
-      alert('Oops! There was a problem sending your message.');
-    }
+      //window.location.href = "https://ngl.link/p/sent?lng=en";
   })
   .catch(error => {
-    console.error('Error sending message:', error);
-    alert('Oops! There was a problem sending your message.');
+      //window.location.href = "https://ngl.link/p/sent?lng=en";
   });
 });
 
