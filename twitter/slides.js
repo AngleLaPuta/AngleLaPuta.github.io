@@ -4,7 +4,6 @@ showSlides();
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("bust");
-  console.log(slides)
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -20,13 +19,18 @@ showSlides1();
 
 function showSlides1() {
   let j;
+
   let slides1 = document.getElementsByClassName("half");
+  console.log(slides1)
   for (j = 0; j < slides1.length; j++) {
     slides1[j].style.display = "none";
   }
   slideIndex1++;
+  
   if (slideIndex1 > slides1.length) {slideIndex1 = 1}
   slides1[slideIndex-1].style.display = "block";
+console.log(slideIndex1)
+  console.log(slides1[slideIndex-1])
   setTimeout(showSlides1, 2000); // Change image every 2 seconds
 }
 
