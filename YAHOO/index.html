@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#1954">1950s</a></li>
+      <li><a href="#1963">1960s</a></li>
+      <li><a href="#1973">1970s</a></li>
+      <li><a href="#1990s">1990s</a></li>
+    </ul>
+  </nav>
+  <div class="timeline">
+
+    <div class="container left" data-year="1954" id = "1954">
+      <img src="ribbon.png" class="corner-image"  height="200">
+      <div class="content">
+        <h2><span class="event-year">1954:</span> Brown v. Board of Education (#1)</h2>
+        <p>This landmark Supreme Court case in 1954 declared racial segregation in public schools unconstitutional, laying the foundation for the civil rights movement. It played a pivotal role in challenging racial inequality and promoting equal educational opportunities for all.<img src="brown.jpg"></p>
+      </div>
+    </div>
+    <div class="container right" data-year="1957" id = "1957">
+      <img src="ribbon.png" class="corner-image"  height="200">
+      <div class="content">
+        <h2><span class="event-year">1957:</span> USSR launches Sputnik(#2)</h2>
+        <p>The launch of the first artificial satellite in 1957 by the Soviet Union marked the beginning of the Space Age and triggered the Space Race between the US and USSR. It fueled technological advancements, scientific exploration, and Cold War competition.<img src="sputnik.jpg"></p>
+      </div>
+    </div>
+    <div class="container left" data-year="1958" id = "1958">
+      <div class="content">
+        <h2><span class="event-year">1958:</span> NASA established(#6)</h2>
+        <p>The establishment of the National Aeronautics and Space Administration (NASA) in 1958 facilitated American space exploration and contributed to significant scientific and technological advancements. It led to remarkable achievements such as the moon landing and furthered our understanding of the universe.<img src="nasa.jpg"></p>
+      </div>
+    </div>
+    <div class="container right" data-year="1959" id = "1959">
+      <div class="content">
+        <h2><span class="event-year">1959:</span> Cuban Revolution(#4)</h2>
+        <p>Fidel Castro's successful revolution in 1959 resulted in the establishment of a communist government in Cuba, leading to significant geopolitical shifts and tensions with the United States. It shaped the course of the Cold War and influenced political dynamics in the Western Hemisphere.<img src="cuba.jpg"></p>
+      </div>
+    </div>
+    <div class="container left" data-year="1963" id = "1963">
+      <div class="content">
+        <h2><span class="event-year">1963:</span> Assassination of JFK(#8)</h2>
+        <p>The assassination of President John F. Kennedy in 1963 had a profound impact on American society and politics, leading to increased scrutiny of the government and conspiracy theories. It marked a turning point in American history and fueled debates on national security and political stability.<img src="jfk.jpg"></p>
+      </div>
+    </div>
+    <div class="container right" data-year="1964" id = "1964">
+      <div class="content">
+        <h2><span class="event-year">1964:</span> Civil Rights Act of 1964 (#5)</h2>
+        <p>This legislation outlawed racial segregation and discrimination in public facilities and employment, contributing to the advancement of the civil rights movement. It aimed to ensure equal rights for all citizens and fostered social progress and integration.<img src="civil.jpg"></p>
+      </div>
+    </div>
+    <div class="container left" data-year="1969" id="stonewall">
+      <div class="content">
+        <h2><span class="event-year">1969:</span> Stonewall Riots(#6)</h2>
+        <p>The Stonewall Riots, which occurred in June 1969, were a series of spontaneous demonstrations by the LGBTQ+ community in response to a police raid at the Stonewall Inn in New York City. These riots became a defining moment in the LGBTQ+ rights movement, igniting a wave of activism and advocacy for equal rights and protections. The Stonewall Riots marked a turning point in the fight for LGBTQ+ visibility, acceptance, and equality.<img src="stonewall.jpg"></p>
+      </div>
+    </div>
+    <div class="container right" data-year="1969" id = "1969">
+      <img src="ribbon.png" class="corner-image"  height="200">
+      <div class="content">
+        <h2><span class="event-year">1969:</span> Moon Landing(#3)</h2>
+        <p>The historic Apollo 11 moon landing in 1969 represented a significant achievement for human space exploration and showcased American technological prowess. It symbolized the fulfillment of a national goal and inspired future scientific endeavors.<img src="moon.webp"></p>
+      </div>
+    </div>
+    <div class="container left" data-year="1973" id = "1973">
+      <div class="content">
+        <h2><span class="event-year">1973:</span> Roe v. Wade(#9)</h2>
+        <p>The Supreme Court's ruling in 1973 legalized abortion in the United States, sparking debates and shaping the ongoing discourse surrounding reproductive rights. It had a profound impact on women's rights, privacy, and the broader social and political landscape.<img src="roe.webp"></p>
+      </div>
+    </div>
+    <div class="container right" data-year="1990" id = "1990s">
+      <div class="content">
+        <h2><span class="event-year">1990s:</span> Internet(#10)</h2>
+        <p>The development and widespread adoption of the internet starting in the 1990s revolutionized communication, commerce, and access to information, fundamentally transforming society. It connected the world like never before and paved the way for the digital age we live in today.<img src="internet.jpg"></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const containers = document.querySelectorAll(".container");
+      let prevYear = 1954;
+
+      containers.forEach((container) => {
+        const year = parseInt(container.dataset.year);
+        const yearDiff = year - prevYear;
+
+        if (yearDiff > 1) {
+          const marginTop = (yearDiff - 1) * 50;
+          container.style.marginTop = `${marginTop}px`;
+        }
+
+        prevYear = year;
+      });
+    });
+  </script>
+</body>
+</html>

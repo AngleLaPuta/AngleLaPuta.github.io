@@ -10,7 +10,7 @@ questionInput.addEventListener("input", function() {
 });
 
 // Initialize the form object with the URL of your Google Form
-const form = FormApp.openByUrl('https://docs.google.com/forms/d/e/<FORM_ID>/viewform');
+const form = FormApp.openByUrl('https://docs.google.com/forms/d/e/1FAIpQLSdi5g5rK0VBo4o0EeZIDFGoWJ1mRokp1LPJ2sohTW6cOrb_bQ/viewform');
 
 async function logFormData(formData) {
   try {
