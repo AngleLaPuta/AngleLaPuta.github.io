@@ -91,6 +91,13 @@ function showSlides3() {
 
 function toggleSlideshow() {
   slideshowActive = !slideshowActive;
+
+  if (slideshowActive) {
+    button.style.color = 'green';
+  } else {
+    button.style.color = 'red';
+  }
+
   console.log(slideshowActive);
 }
 
