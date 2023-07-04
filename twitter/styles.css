@@ -12,6 +12,13 @@
   z-index: 999;
 }
 
+.cs-button {
+  position: fixed;
+  top: 100px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  z-index: 999;
+}
+
 #contact-form label {
   font-size: 1.2rem;
   font-weight: bold;

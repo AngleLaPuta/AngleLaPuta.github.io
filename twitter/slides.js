@@ -93,9 +93,9 @@ function toggleSlideshow() {
   slideshowActive = !slideshowActive;
 
   if (slideshowActive) {
-    button.style.color = 'green';
+    toggleButton.style.backgroundColor = 'green';
   } else {
-    button.style.color = 'red';
+    toggleButton.style.backgroundColor = 'red';
   }
 
   console.log(slideshowActive);
@@ -104,3 +104,4 @@ function toggleSlideshow() {
 // Example: Bind the toggleSlideshow function to a button element with id "toggleButton"
 let toggleButton = document.getElementById("toggleButton");
 toggleButton.addEventListener("click", toggleSlideshow);
+toggleButton.style.backgroundColor = 'green';
