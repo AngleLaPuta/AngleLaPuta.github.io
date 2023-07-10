@@ -1,6 +1,24 @@
+
 let slideIndex = 0;
 slideshowActive = true;
 showSlides();
+
+function toggleSlideshow() {
+  slideshowActive = !slideshowActive;
+
+  if (slideshowActive) {
+    toggleButton.style.backgroundColor = 'green';
+  } else {
+    toggleButton.style.backgroundColor = 'red';
+  }
+
+  console.log(slideshowActive);
+}
+
+// Example: Bind the toggleSlideshow function to a button element with id "toggleButton"
+let toggleButton = document.getElementById("toggleButton");
+toggleButton.addEventListener("click", toggleSlideshow);
+toggleButton.style.backgroundColor = 'green';
 
 
 function showSlides() {
@@ -89,19 +107,3 @@ function showSlides3() {
   setTimeout(showSlides3, 2000); // Change image every 2 seconds
 }
 
-function toggleSlideshow() {
-  slideshowActive = !slideshowActive;
-
-  if (slideshowActive) {
-    toggleButton.style.backgroundColor = 'green';
-  } else {
-    toggleButton.style.backgroundColor = 'red';
-  }
-
-  console.log(slideshowActive);
-}
-
-// Example: Bind the toggleSlideshow function to a button element with id "toggleButton"
-let toggleButton = document.getElementById("toggleButton");
-toggleButton.addEventListener("click", toggleSlideshow);
-toggleButton.style.backgroundColor = 'green';

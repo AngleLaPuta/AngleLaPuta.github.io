@@ -5,11 +5,14 @@
   margin: auto;
   margin-left: 100 px;
 }
+.cont {
+      position: relative;
+    }
 .watermark {
       position: absolute;
-      top: 20px;
-      left: 75px;
-      opacity: 0.5; /* Adjust opacity as needed */
+      top: 0px;
+      left: 0px;
+      opacity: 0.75; /* Adjust opacity as needed */
     }
 
 .fixed-button {
@@ -62,7 +65,7 @@
 
 
 body {
-  font-family: "Comic Sans MS", sans-serif;
+  font-family: "Comic Sans MS";
   background: linear-gradient(90deg, #ff69b4 0%, #ffb6c1 25%, #d3a6d1 50%, #add8e6 75%, #9ac0cd 100%);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -415,6 +418,7 @@ nav {
 
 
 footer {
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;

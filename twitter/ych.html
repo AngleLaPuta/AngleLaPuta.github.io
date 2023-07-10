@@ -12,7 +12,7 @@
           alert("really nigga")
           if (!$(e.target).hasClass('watermark')) {
             e.preventDefault();
-            $('img:not(.watermark)').attr('src', 'img.jpg');
+            $('img:not(.corner-image)').attr('src', 'img.jpg');
           }
         });
       });
@@ -50,15 +50,33 @@
       <div class="blue container" >
         <div>
           <div class="imageshowcase busts">
-            <img src="pet/image01.png" class = "bust fade" alt="The best peice of art you've ever seen in your entire life.">
-            <img src="pet/image02.png" class = "bust fade"  alt="The best peice of art you've ever seen in your entire life.">
-            <img src="pet/image03.png" class = "bust fade"  alt="The best peice of art you've ever seen in your entire life.">
-            <img src="pet/image04.png" class = "bust fade"  alt="The best peice of art you've ever seen in your entire life.">
-            <img src="pet/image05.jpg" class = "bust fade"  alt="The best peice of art you've ever seen in your entire life.">
-            <img src="pet/image06.jpg" class = "bust fade"  alt="The best peice of art you've ever seen in your entire life.">
+            <div class ="cont bust">
+              <img src="pet/image01.png" class = "fade" alt="The best peice of art you've ever seen in your entire life.">
+              <img class="watermark" src="wm.png" alt="Image 2" style="display: flex;">
+            </div>
+            <div class ="cont bust">
+              <img src="pet/image02.png" class = "fade" alt="The best peice of art you've ever seen in your entire life.">
+              <img class="watermark" src="wm.png" alt="Image 2" style="display: flex;">
+            </div>
+            <div class ="cont bust">
+              <img src="pet/image03.png" class = "fade" alt="The best peice of art you've ever seen in your entire life.">
+              <img class="watermark" src="wm.png" alt="Image 2" style="display: flex;">
+            </div>
+            <div class ="cont bust">
+              <img src="pet/image04.png" class = "fade" alt="The best peice of art you've ever seen in your entire life.">
+              <img class="watermark" src="wm.png" alt="Image 2" style="display: flex;">
+            </div>
+            <div class ="cont bust">
+              <img src="pet/image05.jpg" class = "fade" alt="The best peice of art you've ever seen in your entire life.">
+              <img class="watermark" src="wm.png" alt="Image 2" style="display: flex;">
+            </div>
+            <div class ="cont bust">
+              <img src="pet/image06.jpg" class = "fade" alt="The best peice of art you've ever seen in your entire life.">
+              <img class="watermark" src="wm.png" alt="Image 2" style="display: flex;">
+            </div>
           </div>
-          <img class="watermark" src="wm.png" alt="Image 2">
         </div>
+        <div></div>
         <div class="other-content">
           <h1>Headpats YCH</h1>
           <p>Have your character being pet for the low price of <span>1 USD</span></p>
@@ -69,7 +87,7 @@
         </div>
       </div>
 
-      <script type="text/javascript" src="slides.js"></script>
+      <script type="text/javascript" src="slides1.js"></script>
       <script type="text/javascript" src="currency.js"></script>
       <div class="red container" id="tos">
         <div class="other-content">
