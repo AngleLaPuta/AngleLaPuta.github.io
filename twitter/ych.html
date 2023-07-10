@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kit's Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(document).on('contextmenu', function(e) {
+          alert("really nigga")
+          if (!$(e.target).hasClass('watermark')) {
+            e.preventDefault();
+            $('img:not(.watermark)').attr('src', 'img.jpg');
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Top</a></li>
+      </ul>
+    </nav>
+    <main>
+      <button id="currButton" class="cs-button">Currency</button>
+      <button id="toggleButton" class="fixed-button">Toggle Slideshow</button>
+      <div class="indigo container">
+        <div class="button-container">
+          <a href="aboutme.html"><button class="red">About Me</button></a>
+          <a href="interests.html"><button class="orange">Interests</button></a>
+          <a href="dni.html"><button class="yellow">DNI</button></a>
+          <a href="pronounce.html"><button class="green">Pronouny</button></a>
+          <a href="flags.html"><button class="mint">Flags</button>
+          <a href="kins.html"><button class="teal">Kinlist</button>
+          <a href="https://discord.gg/RyvTMqwfZF"><button class="blue">Discord</button></a>
+          <a href="comms.html"><button class="indigo">Comms</button></a>
+          <a href="links.html"><button class="purple">LinkTree</button></a>
+        </div>
+        <div class="other-content">
+          <h1>YCH'S UWU</h1>
+          <p>Any solid color, flag, or specific image background is free, just ask pwease!</p>
+          <p><strong>ALL PAYMENTS WITH <a href="https://ko-fi.com/angledraws">PAYPAL</a>: +20%  <br>PAYING WITH NITRO FOR HALFBODYS IS TOTALLY FINE! >w<</strong></p>
+          <p>Otherwise you can pay with <a href="cash.app/angledr"> Cashapp</a> or Robux</p>
+        </div>
+      </div>
+      <div class="blue container" >
+        <div>
+          <div class="imageshowcase busts">
+            <img src="pet/image01.png" class = "bust fade" alt="The best peice of art you've ever seen in your entire life.">
+            <img src="pet/image02.png" class = "bust fade"  alt="The best peice of art you've ever seen in your entire life.">
+            <img src="pet/image03.png" class = "bust fade"  alt="The best peice of art you've ever seen in your entire life.">
+            <img src="pet/image04.png" class = "bust fade"  alt="The best peice of art you've ever seen in your entire life.">
+            <img src="pet/image05.jpg" class = "bust fade"  alt="The best peice of art you've ever seen in your entire life.">
+            <img src="pet/image06.jpg" class = "bust fade"  alt="The best peice of art you've ever seen in your entire life.">
+          </div>
+          <img class="watermark" src="wm.png" alt="Image 2">
+        </div>
+        <div class="other-content">
+          <h1>Headpats YCH</h1>
+          <p>Have your character being pet for the low price of <span>1 USD</span></p>
+          <ul>
+            <li>Shading is an extra <span>0.5 USD</span></li>
+            <li>The petting hand can be colored for free!</li>
+          </ul>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="slides.js"></script>
+      <script type="text/javascript" src="currency.js"></script>
+      <div class="red container" id="tos">
+        <div class="other-content">
+          <img src="catgener.png" class="corner-image"  height="200">
+          <h1>Me, as the Artist</h1>
+          <ul>
+            <li>Maintain the rights to post my work in any form! ^_^</li>
+            <li>Maintain the right to post commissions to my social media for advertising! ฅ^•ﻌ•^ฅ</li>
+            <li>Maintain the right to turn down any commission! (；ω；)</li>
+            <li>Will NOT refund you! Sorry (╥﹏╥)</li>
+          </ul>
+        </div>
+        <div class="other-content">
+          <h1>You, as the Client</h1>
+          <ul>
+            <li>May NOT reprint your commission for a profit! (ง'̀-'́)ง</li>
+            <li>MAY print your commission for personal use! Yay! (≧◡≦)</li>
+            <li>May edit, crop, and resize the art I give you. HOWEVER, I require you still credit me for the piece! ⁽⁽ଘ( ˊᵕˋ )ଓ⁾⁾</li>
+            <li>May post the work to your own website/social media, but should credit or link back to me! (*^ω^*)</li>
+            <li>May request minor edits and corrections to finished pieces. Significant edits and redraws must be paid for, $5 per edit! ٩(๑❛ᴗ❛๑)۶</li>
+          </ul>
+        </div>
+        <div class="other-content">
+          <h1>To commission, DM:</h1>
+          <ul>
+            <li>Commission type! (✿^‿^)</li>
+            <li>Reference Image! (*´∇｀*)</li>
+            <li>Details! (≧◡≦)</li>
+            <li>Due to Scamming, you must pay first! Sorry (つω`*)ﾃﾍﾍﾟ</li>
+          </ul>
+        </div>
+</div>
+    </main>
+    <footer>
+      <p>Copyright © 2023</p>
+      <div id="result"></div>
+    </footer>
+  </body>
+</html>

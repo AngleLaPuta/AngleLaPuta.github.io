@@ -5,6 +5,13 @@
   margin: auto;
   margin-left: 100 px;
 }
+.watermark {
+      position: absolute;
+      top: 20px;
+      left: 75px;
+      opacity: 0.5; /* Adjust opacity as needed */
+    }
+
 .fixed-button {
   position: fixed;
   bottom: 100px; /* Adjust the top position as needed */
@@ -294,6 +301,7 @@ background-color: #c2b280; /* tabby brown */
 }
 .corner-image {
   position: absolute;
+  z-index: 100;
   object-fit: contain;
   top: -50px;
   right: -50px;
