@@ -29,6 +29,12 @@
   border: 1px solid #ccc;
 }
 
+/* Additional CSS properties for the image */
+.ad img {
+  width: 300px; /* Ensure the image takes the full width within the ad container */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
 .close-button {
   position: absolute;
   top: 5px;
