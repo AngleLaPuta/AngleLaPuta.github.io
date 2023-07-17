@@ -3,7 +3,8 @@ let colors = [["#b22234", "#3c3b6e"],["#009c3b",'#ffdf00','#002776'],['red'],['#
 let adrate = [1,4.84,1.32,0.79,80]
 let curIndex = 1
 let prices = []
-console.log(prices)
+sale = false
+poff = 50
 const formatter = new Intl.NumberFormat('en-US', { 
     minimumFractionDigits: 2
 })
@@ -23,9 +24,10 @@ function init() {
     while ((textNode = textNodes.nextNode())) {
       let newv = textNode.nodeValue;
       newv = newv.substr(0, newv.length - 3);
-      console.log(newv)
+      if (sale){
+        newv=newv*((100-poff)/100)
+      }
       prices.push(newv)
-      console.log(prices)
     }
   }
   curIndex--
@@ -69,7 +71,6 @@ function edit() {
         newv = newv.toFixed(2);  // Force trailing zeroes with toFixed() method
         newv = formatter.format(newv);
       }
-      
       textNode.nodeValue = newv + ' ' + currencies[curIndex];
     }
   }
