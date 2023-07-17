@@ -2,7 +2,8 @@ $(document).ready(function() {
   var adImages = [
     'ad.jpg',
     'ad.gif',
-    'https://i.pinimg.com/736x/f8/97/ef/f897ef30cc7da93a5ddd408c375e35b6.jpg'
+    'https://i.pinimg.com/736x/f8/97/ef/f897ef30cc7da93a5ddd408c375e35b6.jpg',
+    'https://pa1.aminoapps.com/7752/2d18d30f402f990645c85948d873e10e09bbab73r1-320-235_00.gif'
   ];
 
   function getRandomTime() {
