@@ -1,6 +1,17 @@
-let currencies = ["USD","BRK","CAD","GPB","RBX"]
-let colors = [["#b22234", "#3c3b6e"],["#009c3b",'#ffdf00','#002776'],['red'],['#012169','#C8102E'],['pink']]
-let adrate = [1,4.84,1.32,0.79,80]
+let currencies = ["USD", "BRL", "CAD", "GBP", "EUR", "TRY", "AUD", "JPY", "RBX"];
+let colors = [
+  ["#b22234", "#3c3b6e"], // Flag 1 colors
+  ["#009c3b", "#ffdf00", "#002776"], // Flag 2 colors
+  ["red"], // Flag 3 colors
+  ["#012169", "#C8102E"], // Flag 4 colors
+  
+  ["#FFFFFF", "#FF0000", "#0000FF"], // Flag 6 colors
+  ["#E30A17", "#FDF3E7"], // Flag 7 colors
+  ["#015293", "#FFDF00", "#E31837"], // Flag 8 colors
+  ["#D33D44", "#FFFFFF", "#000000"], // Flag 9 colors
+  ["pink"], // Flag 5 colors
+];
+let adrate = [1, 4.84, 1.32, 0.79, 1.13, 0.037, 0.68, 0.0072, 80];
 let curIndex = 1
 let prices = []
 sale = false
