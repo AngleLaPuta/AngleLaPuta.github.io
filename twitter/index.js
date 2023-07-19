@@ -21,7 +21,7 @@ $(document).ready(function() {
     // Set the src attribute of the ad image
     $ad.find('img').attr('src', randomImageSrc);
 
-     // Redirect to example.com when the ad is clicked
+    // Redirect to example.com when the ad is clicked
     $ad.find('img').on('click', function() {
       window.open('https://anglelaputa.github.io/twitter/comms.html', '_blank');
     });
@@ -29,6 +29,9 @@ $(document).ready(function() {
     $ad.find('.close-button').on('click', function() {
       $ad.fadeOut();
     });
+
+    // Remove the existing classes and add the new class to position the ad
+    $ad.removeClass('right left').addClass(Math.random() < 0.5 ? 'right' : 'left');
   }
 
   setInterval(showAdWithDelay, getRandomTime());
