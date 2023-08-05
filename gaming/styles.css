@@ -578,13 +578,3 @@ a:hover {
   from {opacity: .4}
   to {opacity: 1}
 }
-
-img {
-        width: 200px; /* desired width */
-        height: 200px; /* desired height */
-        object-fit: cover; /* or 'contain' based on your preference */
-        transition: transform .2s;
-      }
-      img:hover{
-        transform: scale(1.1)
-      }
