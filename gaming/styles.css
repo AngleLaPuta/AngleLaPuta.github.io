@@ -574,6 +574,7 @@ a:hover {
   animation-duration: 1.5s;
 }
 
+
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
