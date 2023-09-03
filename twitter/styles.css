@@ -1,10 +1,13 @@
-#contact-form {
-  flex-direction: column;
+.bg {
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
   align-items: center;
-  width: 80%;
-  margin: auto;
-  margin-left: 100 px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
 }
+
 .cont {
       position: relative;
     }
@@ -386,7 +389,6 @@ background-color: #c2b280; /* tabby brown */
 }
 
 .other-content {
-  align-items: flex-start;
   margin-left: 20px;
   flex: 1;
 }
