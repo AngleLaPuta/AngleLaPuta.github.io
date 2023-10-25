@@ -1,5 +1,6 @@
 
 let slideIndex = 0;
+let pslideIndex = 0;
 slideshowActive = true;
 showSlides();
 
@@ -37,5 +38,21 @@ function showSlides() {
       slides[i].style.display = "inline";
     }
   }
+  let pslides = document.getElementsByClassName("pride");
+  if (slideshowActive) {  
+    for (let i = 0; i < pslides.length; i++) {
+      pslides[i].style.display = "none";
+    }
+    if (pslideIndex >= pslides.length) {
+      pslideIndex = 0;
+    }
+    pslides[pslideIndex].style.display = "block";
+    pslideIndex++;
+  } else {
+    for (let i = 0; i < pslides.length; i++) {
+      pslides[i].style.display = "inline";
+    }
+  }
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
