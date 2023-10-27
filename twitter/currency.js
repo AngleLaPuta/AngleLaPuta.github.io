@@ -14,7 +14,7 @@ let colors = [
 let adrate = [1, 4.84, 1.32, 0.79, 1.13, 0.037, 0.68, 0.0072, 80];
 let curIndex = 1
 let prices = []
-sale = false
+sale = true
 poff = 50
 const formatter = new Intl.NumberFormat('en-US', { 
     minimumFractionDigits: 2
